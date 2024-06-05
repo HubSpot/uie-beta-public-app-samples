@@ -1,0 +1,8 @@
+{
+  "appFunctions": {
+    "restaurants": {
+      "file": "restaurants.js",
+      "secrets": []
+    }
+  }
+}
