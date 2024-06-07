@@ -11,7 +11,7 @@ import {
   TableBody,
   ToggleGroup,
 } from '@hubspot/ui-extensions';
-import { MenuItem, type MenuPanelContentProps } from '../types';
+import type { MenuItem, MenuPanelContentProps } from '../types';
 import { MenuItemRow } from './MenuItemRow';
 
 export const MenuPanelContent = ({
