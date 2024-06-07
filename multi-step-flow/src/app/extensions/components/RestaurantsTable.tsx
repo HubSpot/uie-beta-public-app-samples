@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Panel,
   Reactions,
   Table,
   TableBody,
   Text,
-} from '@hubspot/ui-extensions';
-import { RestaurantRow } from './RestaurantRow';
-import { Restaurant, type RestaurantsTableProps } from '../types';
-import { MenuPanelContent } from './MenuPanelContent';
+} from "@hubspot/ui-extensions";
+import { RestaurantRow } from "./RestaurantRow";
+import { Restaurant, type RestaurantsTableProps } from "../types";
+import { MenuPanelContent } from "./MenuPanelContent";
 
 const PAGE_SIZE = 4;
-const MENU_PANEL_ID = 'menu-panel';
+const MENU_PANEL_ID = "menu-panel";
 
 export const RestaurantsTable = ({
   searchTerm,
@@ -60,9 +60,9 @@ export const RestaurantsTable = ({
 
       {/* Render Panel wrapper */}
       <Panel
-        variant='modal'
+        variant="modal"
         id={MENU_PANEL_ID}
-        title={selectedRestaurant ? selectedRestaurant.name : 'Menu Panel'}
+        title={selectedRestaurant ? selectedRestaurant.name : "Menu Panel"}
         onClose={() => setSelectedRestaurant(null)}
       >
         {/* Check if any restaurant is selected and conditionally render Panel content */}
