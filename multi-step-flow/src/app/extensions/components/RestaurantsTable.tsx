@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Panel, Table, TableBody, Text } from '@hubspot/ui-extensions';
 import { RestaurantRow } from './RestaurantRow';
-import {
+import type {
   ButtonOnClickReactons,
   Restaurant,
-  type RestaurantsTableProps,
+  RestaurantsTableProps,
 } from '../types';
 import { MenuPanelContent } from './MenuPanelContent';
 
