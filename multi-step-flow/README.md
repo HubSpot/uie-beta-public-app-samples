@@ -25,16 +25,16 @@ This sample demonstrates a number of interactions that are enabled by React exte
 
 ### Step 2: Upload project to your developer account
 
-Run `hs project upload`. Open your developer account and see the app installed.
+Run `hs project upload`. Open your developer account and see the app installed in the 'App' section. Under the Basic info -> Auth you will find the App ID, Client ID and scopes
 
 ### Step 3: Install the app to your test account
 
 To get started, you can use our sample OAuth Nodejs [example](https://github.com/hubspot/oauth-quickstart-nodejs). 
-Configure the quickstart app's `.env` with the info from the app's settings page, then run it locally. It is already set up to work with http://localhost:3000/oauth-callback as the redirect URL. 
+Configure the quickstart app's `.env` with the info from the app's settings pagen (App ID, Client ID and scopes), then run it locally. It is already set up to work with http://localhost:3000/oauth-callback as the redirect URL. Install the app into your developer test account
 
 ### Step 3: View the cards in the dev test account
 
-In the main menu select `Contacts` > `Contacts` to view contact records. Click on any of the contact objects and navigate to the custom tab to access the sample card. If you don’t have any contacts in the account you’re using to view this sample, create a contact by the following steps:
+In the main menu of your dev test account, select `Contacts` > `Contacts` to view contact records. Click on any of the contact objects and navigate to the custom tab to access the sample card. If you don’t have any contacts in the account you’re using to view this sample, create a contact by the following steps:
 
 1. In the main menu, select `Contacts` > `Contacts`.
 2. Click `Create contact` in the top right hand corner and fill in all required fields. Click `create` once you’ve finished filling in your contact details.
