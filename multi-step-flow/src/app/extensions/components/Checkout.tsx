@@ -5,7 +5,7 @@ import {
   Flex,
   Heading,
   Text,
-  TextArea
+  TextArea,
 } from '@hubspot/ui-extensions';
 import React, { useState } from 'react';
 import type { CheckoutProps } from '../types';
@@ -14,7 +14,7 @@ import { formatPrice } from '../utils';
 export const Checkout = ({
   deliveryCost,
   subtotal,
-  onCheckoutClick
+  onCheckoutClick,
 }: CheckoutProps) => {
   const [message, setMessage] = useState('');
   const delivery = deliveryCost || 0;

@@ -3,7 +3,7 @@ import {
   Flex,
   Heading,
   TableCell,
-  TableRow
+  TableRow,
 } from '@hubspot/ui-extensions';
 import React from 'react';
 import type { CartItemRowProps } from '../types';

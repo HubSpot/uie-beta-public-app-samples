@@ -1,17 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { Panel, Table, TableBody, Text } from '@hubspot/ui-extensions';
+import { RestaurantRow } from './RestaurantRow';
 import {
-  Panel,
-  Reactions,
-  Table,
-  TableBody,
-  Text,
-} from "@hubspot/ui-extensions";
-import { RestaurantRow } from "./RestaurantRow";
-import { Restaurant, type RestaurantsTableProps } from "../types";
-import { MenuPanelContent } from "./MenuPanelContent";
+  ButtonOnClickReactons,
+  Restaurant,
+  type RestaurantsTableProps,
+} from '../types';
+import { MenuPanelContent } from './MenuPanelContent';
 
 const PAGE_SIZE = 4;
-const MENU_PANEL_ID = "menu-panel";
+const MENU_PANEL_ID = 'menu-panel';
 
 export const RestaurantsTable = ({
   searchTerm,
@@ -26,7 +24,7 @@ export const RestaurantsTable = ({
   const pageCount = Math.ceil(restaurants.length / PAGE_SIZE);
   const paginatedRestaurants = restaurants.slice(
     (pageNumber - 1) * PAGE_SIZE,
-    (pageNumber - 1) * PAGE_SIZE + PAGE_SIZE
+    (pageNumber - 1) * PAGE_SIZE + PAGE_SIZE,
   );
 
   if (paginatedRestaurants.length === 0) {
@@ -48,7 +46,7 @@ export const RestaurantsTable = ({
           {paginatedRestaurants.map((restaurant) => (
             <RestaurantRow
               restaurant={restaurant}
-              onClick={(reactions: Reactions) => {
+              onClick={(reactions: ButtonOnClickReactons) => {
                 setSelectedRestaurant(restaurant);
                 reactions.openPanel(MENU_PANEL_ID);
               }}
@@ -62,7 +60,7 @@ export const RestaurantsTable = ({
       <Panel
         variant="modal"
         id={MENU_PANEL_ID}
-        title={selectedRestaurant ? selectedRestaurant.name : "Menu Panel"}
+        title={selectedRestaurant ? selectedRestaurant.name : 'Menu Panel'}
         onClose={() => setSelectedRestaurant(null)}
       >
         {/* Check if any restaurant is selected and conditionally render Panel content */}
@@ -70,7 +68,7 @@ export const RestaurantsTable = ({
           <MenuPanelContent
             restaurant={selectedRestaurant}
             onAddToCartClick={onAddToCartClick}
-            closePanel={(reactions: Reactions) =>
+            closePanel={(reactions: ButtonOnClickReactons) =>
               reactions.closePanel(MENU_PANEL_ID)
             }
           />

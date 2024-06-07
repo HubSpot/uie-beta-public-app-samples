@@ -2,7 +2,7 @@ import type {
   AddAlertAction,
   Context,
   FetchCrmObjectPropertiesAction,
-  ServerlessFuncRunner
+  ServerlessFuncRunner,
 } from '@hubspot/ui-extensions';
 
 export interface MenuItem {

@@ -10,5 +10,5 @@ hubspot.extend<'crm.record.tab'>(
       runServerless={runServerlessFunction}
       sendAlert={actions.addAlert}
     />
-  )
+  ),
 );

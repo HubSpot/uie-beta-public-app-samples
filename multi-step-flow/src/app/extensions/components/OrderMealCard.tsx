@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from 'react';
 import {
   Divider,
   LoadingSpinner,
@@ -7,14 +7,14 @@ import {
   Button,
   Flex,
   hubspot,
-} from "@hubspot/ui-extensions";
-import { Cart } from "./Cart";
-import type { CartItem, OrderMealProps, Restaurant } from "../types";
-import { RestaurantsSearch } from "./RestaurantsSearch";
-import { Checkout } from "./Checkout";
+} from '@hubspot/ui-extensions';
+import { Cart } from './Cart';
+import type { CartItem, OrderMealProps, Restaurant } from '../types';
+import { RestaurantsSearch } from './RestaurantsSearch';
+import { Checkout } from './Checkout';
 
 const RESTAURANTS_SOURCE_URL =
-  "https://run.mocky.io/v3/b8d16309-98b2-4a16-9724-46e8821395b5";
+  'https://run.mocky.io/v3/b8d16309-98b2-4a16-9724-46e8821395b5';
 
 export const OrderMealCard = ({
   fetchCrmObjectProperties,
@@ -27,7 +27,7 @@ export const OrderMealCard = ({
   const [cart, updateCart] = useState<Array<CartItem>>([]);
   const [restaurants, setRestaurants] = useState<Array<Restaurant>>([]);
   const [selected, setSelected] = useState<number>();
-  const [contactName, setContactName] = useState("");
+  const [contactName, setContactName] = useState('');
 
   // Make a memoized fetch function that handles error and loading state
   // Reusable for both initial card load and retry in case of error
@@ -43,11 +43,11 @@ export const OrderMealCard = ({
           if (Array.isArray(data)) {
             const restaurants = data.map((restaurant: unknown) => {
               if (
-                typeof restaurant !== "object" ||
+                typeof restaurant !== 'object' ||
                 Array.isArray(restaurant) ||
                 restaurant === null
               ) {
-                throw new TypeError("Object is not a Restaurant");
+                throw new TypeError('Object is not a Restaurant');
               }
 
               return restaurant as Restaurant;
@@ -57,7 +57,7 @@ export const OrderMealCard = ({
             return;
           }
 
-          throw new Error("Response is not an array.");
+          throw new Error('Response is not an array.');
         });
       })
       .catch((error) => {
@@ -71,7 +71,7 @@ export const OrderMealCard = ({
 
   useEffect(() => {
     getRestaurants();
-    fetchCrmObjectProperties(["firstname"]).then(({ firstname }) => {
+    fetchCrmObjectProperties(['firstname']).then(({ firstname }) => {
       setContactName(firstname);
     });
   }, []);
@@ -85,20 +85,20 @@ export const OrderMealCard = ({
 
   const handleRemoveClick = useCallback((id: number) => {
     updateCart((items: Array<CartItem>) =>
-      items.filter((item) => item.id !== id)
+      items.filter((item) => item.id !== id),
     );
   }, []);
 
   const handleCheckoutClick = useCallback(
     (message: string) => {
       sendAlert({
-        type: "success",
+        type: 'success',
         message: `Nicely done! The meal is on its way to ${contactName} with the message: "${message}"`,
       });
       updateCart([]);
       clearSelection();
     },
-    [contactName]
+    [contactName],
   );
 
   if (error) {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   Button,
   Flex,
@@ -10,9 +10,9 @@ import {
   Table,
   TableBody,
   ToggleGroup,
-} from "@hubspot/ui-extensions";
-import { MenuItem, type MenuPanelContentProps } from "../types";
-import { MenuItemRow } from "./MenuItemRow";
+} from '@hubspot/ui-extensions';
+import { MenuItem, type MenuPanelContentProps } from '../types';
+import { MenuItemRow } from './MenuItemRow';
 
 export const MenuPanelContent = ({
   restaurant,
@@ -79,7 +79,7 @@ export const MenuPanelContent = ({
                     onChange={setBases}
                     value={bases}
                     validationMessage={
-                      getBasesError() ? "Please choose 1 or 2 options" : ""
+                      getBasesError() ? 'Please choose 1 or 2 options' : ''
                     }
                   />
                   <ToggleGroup
@@ -93,8 +93,8 @@ export const MenuPanelContent = ({
                     value={toppings}
                     validationMessage={
                       getToppingsError()
-                        ? "Please choose 4 or fewer options"
-                        : ""
+                        ? 'Please choose 4 or fewer options'
+                        : ''
                     }
                   />
                   <ToggleGroup
@@ -108,8 +108,8 @@ export const MenuPanelContent = ({
                     value={premiums}
                     validationMessage={
                       getPremiumsError()
-                        ? "Please choose 3 or fewer options"
-                        : ""
+                        ? 'Please choose 3 or fewer options'
+                        : ''
                     }
                   />
                   <ToggleGroup

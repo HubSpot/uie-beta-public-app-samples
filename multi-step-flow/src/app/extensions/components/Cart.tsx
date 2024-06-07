@@ -3,7 +3,7 @@ import {
   Flex,
   Heading,
   Table,
-  TableBody
+  TableBody,
 } from '@hubspot/ui-extensions';
 import React from 'react';
 import type { CartProps } from '../types';
@@ -29,7 +29,7 @@ export const Cart = ({ cart, onRemoveClick }: CartProps) => {
       <Heading>Cart</Heading>
       <Table>
         <TableBody>
-          {cart.map(item => (
+          {cart.map((item) => (
             <CartItemRow
               item={item}
               key={item.id}
