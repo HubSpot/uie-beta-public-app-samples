@@ -1,0 +1,21 @@
+{
+  "portalStates": [
+    {
+      "portalId": 123456789,
+      "flagState": "ON"
+    },
+    {
+      "portalId": 234567891,
+      "flagState": "ON"
+    },
+    {
+      "portalId": 345678912,
+      "flagState": "ON"
+    },
+    {
+      "portalId": 456789123,
+      "flagState": "ON"
+    }
+  ]
+}
+
