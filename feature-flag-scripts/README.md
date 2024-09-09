@@ -1,9 +1,9 @@
-A set of scripts to exercise the management of the feature flag public APIs
+A set of scripts to exercise the management of the Feature Flag public APIs
 
 To use:
 
-- Update two files: `app` and `hapikey`. populate them with an app ID and
-a hapikey, respectively. for example:
+- Update two files: `app` and `apikey`. Populate them with an app ID and
+a Developer API key, respectively. for example:
 
 ```
 $ cat app
