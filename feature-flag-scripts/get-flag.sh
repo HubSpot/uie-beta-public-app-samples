@@ -1,1 +1,1 @@
-curl -s https://api.hubapi.com/feature-flags/v0/$(cat app)/flags/hs-release-app-cards?hapikey=$(cat apikey) | jq .
+curl -s https://api.hubapi.com/feature-flags/v3/$(cat app)/flags/hs-release-app-cards?hapikey=$(cat apikey) | jq .
