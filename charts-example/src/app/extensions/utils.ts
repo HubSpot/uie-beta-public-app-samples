@@ -25,7 +25,7 @@ export const generateSalesOverTimeSamples = ({
     price: random(1, 101),
   }));
 
-export const calculateTotalSalePerMonth = (sales: SaleSample[]) => {
+export const calculateTotalSalesPerMonth = (sales: SaleSample[]) => {
   const salesPerMonthAccumulation = {};
   sales.forEach(({ date }) => {
     const yearMonth = formatToYearMonth(date);

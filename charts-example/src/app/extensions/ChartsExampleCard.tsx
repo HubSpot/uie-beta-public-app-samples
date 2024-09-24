@@ -3,7 +3,7 @@ import { Text } from '@hubspot/ui-extensions';
 import { LineChart, BarChart } from '@hubspot/ui-extensions/experimental';
 import { hubspot } from '@hubspot/ui-extensions';
 import {
-  calculateTotalSalePerMonth,
+  calculateTotalSalesPerMonth,
   formatToYearMonth,
   generateSalesOverTimeSamples,
 } from './utils';
@@ -19,7 +19,7 @@ const Extension = () => {
 
   // LineChart total sales data
   const totalSalesPerMonthBreakdown =
-    calculateTotalSalePerMonth(salesOverTimeSamples);
+    calculateTotalSalesPerMonth(salesOverTimeSamples);
 
   // BarChart revenue data
   const revenuePerMonthBreakdown = salesOverTimeSamples.map(
