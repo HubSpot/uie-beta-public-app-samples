@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text } from '@hubspot/ui-extensions';
-import { LineChart, BarChart } from '@hubspot/ui-extensions/experimental';
+import { Divider, Text } from '@hubspot/ui-extensions';
+import { LineChart, BarChart } from '@hubspot/ui-extensions';
 import { hubspot } from '@hubspot/ui-extensions';
 import {
   calculateTotalSalesPerMonth,
@@ -39,6 +39,7 @@ const Extension = () => {
       </Text>
 
       <LineChart
+        title="Purchase history"
         data={totalSalesPerMonthBreakdown}
         axes={{
           x: {
@@ -54,7 +55,10 @@ const Extension = () => {
         }}
       />
 
+      <Divider />
+
       <BarChart
+        title="Sales distribution"
         data={revenuePerMonthBreakdown}
         axes={{
           x: {

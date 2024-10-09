@@ -1,4 +1,5 @@
-import moment, { Moment } from 'moment';
+import moment from 'moment';
+import type { Moment } from 'moment';
 
 type SaleSample = {
   date: Moment;
