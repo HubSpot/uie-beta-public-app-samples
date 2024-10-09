@@ -39,7 +39,6 @@ const Extension = () => {
       </Text>
 
       <LineChart
-        title="Purchase history"
         data={totalSalesPerMonthBreakdown}
         axes={{
           x: {
@@ -53,12 +52,12 @@ const Extension = () => {
             label: 'Total Sales',
           },
         }}
+        options={{ title: 'Purchase history' }}
       />
 
       <Divider />
 
       <BarChart
-        title="Sales distribution"
         data={revenuePerMonthBreakdown}
         axes={{
           x: {
@@ -69,7 +68,7 @@ const Extension = () => {
           y: { field: 'price', fieldType: 'linear', label: 'Revenue ($)' },
           options: { groupFieldByColor: 'category', stacking: true },
         }}
-        options={{ showLegend: true }}
+        options={{ title: 'Sales distribution', showLegend: true }}
       />
     </>
   );
