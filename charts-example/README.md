@@ -39,4 +39,4 @@ In the main menu of your dev test account, select `Contacts` > `Contacts` to vie
 
 If you haven't customized the tabs before follow step #4 from [this guide](https://developers.hubspot.com/docs/platform/ui-extensions-quickstart).
 
-## Key Components
+
